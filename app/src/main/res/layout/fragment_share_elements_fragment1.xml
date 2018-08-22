@@ -1,0 +1,49 @@
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sampleShareElementsActivity"
+            type="com.example.ha_hai.demomaterialanimationtransition.model.Sample" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.ha_hai.demomaterialanimationtransition.fragment.ShareElementsFragment1">
+
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:id="@+id/imgIconShareElements1"
+            style="@style/MaterialAnimations.Icon.Big"
+            android:src="@drawable/circle_24dp"
+            android:transitionName="@string/share_img_activity"
+            android:layout_gravity="center_horizontal|center"/>
+
+        <TextView
+            style="@style/MaterialAnimations.Text.Body"
+            android:text="Fragment 1"
+            android:textSize="22sp"
+            android:layout_gravity="center_horizontal|center"/>
+
+        <TextView
+            style="@style/MaterialAnimations.Text.Body"
+            android:text="Blue circle is a shared element between MainActivity and this fragment"/>
+
+        <Button
+            android:id="@+id/btnNextOverLapFalse"
+            style="@style/MaterialAnimations.Button"
+            android:text="Next (Overlap transition = false"/>
+
+        <Button
+            android:id="@+id/btnNextOverLapTrue"
+            style="@style/MaterialAnimations.Button"
+            android:text="Next (Overlap transition = true"/>
+
+    </LinearLayout>
+
+</layout>

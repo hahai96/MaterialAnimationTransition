@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="sampleShareElementsActivity"
+            type="com.example.ha_hai.demomaterialanimationtransition.model.Sample" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/contain_shareElementsActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarTransitions"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="@dimen/elevation_header"
+            style="@style/MaterialAnimations.TextAppearance.Title"
+            android:background="?android:colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                style="@style/MaterialAnimations.TextAppearance.Title.Inverse"
+                android:text="@{sampleShareElementsActivity.name}"
+                android:transitionName="@string/share_text_label_activity"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            style="@style/MaterialAnimations.Text.Body"
+            android:text="Toolbar title is a shared element between MainActivity and this activity" />
+
+    </LinearLayout>
+</layout>

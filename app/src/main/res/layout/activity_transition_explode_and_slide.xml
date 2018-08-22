@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="transitionsExplodeCodeSample"
+            type="com.example.ha_hai.demomaterialanimationtransition.model.Sample" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.ha_hai.demomaterialanimationtransition.TransitionActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarTransitions"
+            style="@style/MaterialAnimations.TextAppearance.Title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?android:colorPrimary"
+            android:elevation="@dimen/elevation_header">
+
+            <TextView
+                android:id="@+id/txtToolbarTransitionsExplodeCode"
+                style="@style/MaterialAnimations.TextAppearance.Title.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:text="@{transitionsExplodeCodeSample.name}" />
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            style="@style/MaterialAnimations.Icon.Big"
+            android:src="@drawable/circle_24dp"
+            android:layout_gravity="center_horizontal|center"
+            android:tint="@color/sample_red"/>
+
+        <TextView
+            style="@style/MaterialAnimations.Text.Body"
+            android:text="This activity defines a Explode Enter Transition programmatically. Transitions can be defined either on code or on xml resource files" />
+
+        <Button
+            android:id="@+id/btnExitExplodeAndSlide"
+            style="@style/MaterialAnimations.Button"
+            android:text="Exit" />
+
+    </LinearLayout>
+</layout>
+

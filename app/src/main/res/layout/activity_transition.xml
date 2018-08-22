@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="transitionsSample"
+            type="com.example.ha_hai.demomaterialanimationtransition.model.Sample" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.ha_hai.demomaterialanimationtransition.TransitionActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarTransitions"
+            style="@style/MaterialAnimations.TextAppearance.Title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?android:colorPrimary"
+            android:elevation="@dimen/elevation_header">
+
+            <TextView
+                android:id="@+id/txtToolbarTransitions"
+                style="@style/MaterialAnimations.TextAppearance.Title.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:text="@{transitionsSample.name}" />
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            style="@style/MaterialAnimations.Text.Body"
+            android:text="This activity defines a Explode Enter Transition programmatically. Transitions can be defined either on code or on xml resource files" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnExplodeCode"
+                style="@style/MaterialAnimations.Button"
+                android:layout_weight="1"
+                android:text="Explode (code)" />
+
+            <Button
+                android:id="@+id/btnExplodeXML"
+                style="@style/MaterialAnimations.Button"
+                android:layout_weight="1"
+                android:text="Explode (XML)" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSlideCode"
+                style="@style/MaterialAnimations.Button"
+                android:layout_weight="1"
+                android:text="Slide (code)" />
+
+            <Button
+                android:id="@+id/btnSlideXML"
+                style="@style/MaterialAnimations.Button"
+                android:layout_weight="1"
+                android:text="Slide (XML)" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnExit"
+            style="@style/MaterialAnimations.Button"
+            android:text="Exit" />
+
+        <Button
+            android:id="@+id/btnExitOverridingReturnTransition"
+            style="@style/MaterialAnimations.Button"
+            android:text="Exit (Overriding Return Transition)" />
+
+    </LinearLayout>
+</layout>
+
